@@ -1,0 +1,10 @@
+.conteiner{
+    height: 100vh;
+    background-color: aqua;
+}
+
+.titulo{
+    color: brown;
+    text-align: center;
+    font-size: 2rem;
+}
