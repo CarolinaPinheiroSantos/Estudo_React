@@ -1,11 +1,10 @@
-import {Fundamentos} from './paginas/Fundamentos';
+// import {Inicial} from './paginas/Inicial';
+import {Login} from './paginas/Login'
 
 export function App() {
   return (
     <div>
-      <Fundamentos/>
+      <Login/>
     </div>
   )
 }
-
-

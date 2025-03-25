@@ -1,7 +1,16 @@
+:root{
+    --rosa1:#e6ccb2;
+    --rosa2: #ddb892;
+    --rosa3: #b08968;
+    --rosa4: #7f5539;
+}
+
 *{
     margin: 0rem;
     padding: 0rem;
     box-sizing: border-box;
 }
 
+/* body, input, textarea,button{
 
+} */

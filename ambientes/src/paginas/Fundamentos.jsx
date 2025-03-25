@@ -1,5 +1,6 @@
 import style from './Fundamentos.module.css'
 import {Botao} from '../componetes/Botao'
+import {Contador} from '../componetes/Contador'
 
 export function Fundamentos(){
 
@@ -14,6 +15,8 @@ export function Fundamentos(){
                 titulo='ok' 
                 acao={ () => mensagem('reiniciando o computador')}
             />
+
+            <Contador/>
 
         </div>    
     )
