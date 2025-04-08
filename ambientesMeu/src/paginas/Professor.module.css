@@ -1,0 +1,46 @@
+.containerGeral{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100vh;
+}
+
+.container2{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerble{
+    height: 40rem;
+    width: 40rem;
+    background-color: aqua;
+}
+
+.titulo{
+    font-size: 1.5rem ;
+    color: var(--rosa3);
+    margin-bottom: 20px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.campo{
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.botao{
+    background-color: var(--rosa3);
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-weight: 400;
+}
