@@ -30,8 +30,8 @@ export function Professor(){
             </div>
             
             <div className={styles.container2}>
-                <div className={styles.containerble}>
-                    <p className={styles.titulo}>Login Professor</p>
+                <div className={styles.containerLogin}>
+                    <p className={styles.titulo}>Cadastrar <strong>Professor</strong></p>
 
                     <form 
                         onSubmit={handleSubmit(autenicarProfessor)}
@@ -68,7 +68,6 @@ export function Professor(){
 
 
                         <input 
-                            type="date"
                             {...register('dataNascimento')}
                             placeholder="Data de nascimento" 
                             className={styles.campo}

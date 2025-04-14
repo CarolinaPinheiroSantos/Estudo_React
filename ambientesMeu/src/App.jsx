@@ -1,10 +1,10 @@
-import {Professor} from './paginas/professor';
+import {Disciplina} from './paginas/Disciplina';
 
 
 export function App() {
   return (
     <div>
-      <Professor/>
+      <Disciplina/>
     </div>
   )
 }
