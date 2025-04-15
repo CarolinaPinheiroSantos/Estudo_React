@@ -26,7 +26,7 @@ export function Sala() {
 
             <div className={styles.container2}>
                 <div className={styles.containerLogin}>
-                    <p className={styles.titulo}>Reservarr <strong>Sala</strong></p>
+                    <p className={styles.titulo}>Reservar <strong>Sala</strong></p>
 
                     <form
                         onSubmit={handleSubmit(autenticarSala)}

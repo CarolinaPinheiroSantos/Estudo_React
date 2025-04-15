@@ -1,18 +1,16 @@
 import estilos from './Inicial.module.css'
-import {Cabecalho} from '../componetes/Cabecalho'
-import {Lateral} from '../componetes/Lateral'
-import {Principal} from '../componetes/Principal'
-import {Rodape} from '../componetes/Rodape'
+import {Cabecalho} from '../componentes/Cabecalho'
+import {Lateral} from '../componentes/Lateral'
+import {Principal} from '../componentes/Principal'
+import {Rodape} from '../componentes/Rodape'
 
 export function Inicial(){
     return(
-        <div className={estilos.gridContainer}>
-
-            <Cabecalho/>
-            <Lateral/>
-            <Principal/>
-            <Rodape/>
-
+        <div className={estilos.gridConteiner}>
+            <Cabecalho />
+            <Lateral />
+            <Principal />
+            <Rodape />
         </div>
     )
 }

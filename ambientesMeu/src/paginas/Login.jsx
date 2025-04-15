@@ -1,12 +1,14 @@
 import styles from './Login.module.css'
+import { MetadeTela } from '../componetes/MetadeTela'
 import {useForm} from 'react-hook-form'
 import {z} from 'zod'
 import {zodResolver} from '@hookform/resolvers/zod'
 
 
+
 const loginSchema = z.object({
-    email: z.string().email({message: 'isso n é email n, sai da live filha'}),
-    senha: z.string().length(6, {message: 'É 6 caracteressss'})
+    email: z.string().email({message: 'Esse email não é valido'}),
+    senha: z.string().length(6, {message: 'Senha no minino 6 caracteres'})
 })
 
 export function Login(){
@@ -18,32 +20,42 @@ export function Login(){
     }
 
     return(
-        <div className={styles.container}>
-            <p className={styles.titulo}>Login</p>
+     <div className={styles.containerGeral}>
 
-            <form 
-                onSubmit={handleSubmit(autenicarUsuario)}
-                className={styles.formulario}
-            >
-                <input 
-                    {...register('email')}
-                    placeholder="E-mail" 
-                    className={styles.campo}
-                />
-                {errors.email && (<p className={styles.mensagem}>{errors.email.message}</p>)}
+            <div className={styles.container1}>
+                <MetadeTela/>
+            </div>
+            
+            <div className={styles.container2}>
+                <div className={styles.containerLogin}>
+                    <p className={styles.titulo}><strong>Login</strong></p>        
 
-                <input 
-                    {...register('senha')}
-                    placeholder="Senha" 
-                    className={styles.campo}
-                />
-                {errors.senha && (<p className={styles.mensagem}>{errors.senha.message}</p>)}
+                    <form 
+                        onSubmit={handleSubmit(autenicarUsuario)}
+                        className={styles.formulario}
+                    >
+                        <input 
+                            {...register('email')}
+                            placeholder="E-mail" 
+                            className={styles.campo}
+                        />
+                        {errors.email && (<p className={styles.mensagem}>{errors.email.message}</p>)}
 
-                <button  
-                    className={styles.botao}
-                >Entrar</button>
+                        <input 
+                            {...register('senha')}
+                            placeholder="Senha" 
+                            className={styles.campo}
+                        />
+                        {errors.senha && (<p className={styles.mensagem}>{errors.senha.message}</p>)}
 
-            </form>
+                        <button  
+                            className={styles.botao}
+                        >Entrar</button>
+
+                    </form>
+                </div>
+            </div>
+
         </div>
 
     )

@@ -1,37 +1,51 @@
-import styles from './Lateral.module.css'
-import { PiStudentLight } from "react-icons/pi";
+import estilos from './Lateral.module.css'
+import { PiStudentBold } from 'react-icons/pi'
+import { FaPencilAlt, FaCalendarAlt } from 'react-icons/fa'
+import { SiGoogleclassroom } from 'react-icons/si'
+import {Link} from 'react-router'
+
+import foto from '../assets/perfil.jpg'
 
 export function Lateral(){
     return(
-        <aside className={styles.container}>
-            <head>
+        <aside className={estilos.conteiner}>
+            <header>
                 <img 
-                    className={styles.imagemCabecalho} 
-                    src={'https://images.unsplash.com/photo-1741686358778-70b1dbcbe4df?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+                    className={estilos.imagemCabecalho} 
+                    src={'https://images.unsplash.com/photo-1566305977571-5666677c6e98?q=80&w=2145&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
                 />
-
-                <div className={styles.containerUsuario}>
+                <div className={estilos.conteinerUsuario}>
                     <img 
-                        className={styles.fotoUsuario}
-                        src= {'https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2024/11/04/2068666766-hamsters.jpg'}    
+                        className={estilos.fotoUsuario} 
+                        src={foto}                        
                     />
-                    <p className={styles.nomeUsuario}>usuario</p>
+                    <p className={estilos.nomeUsuario}>Usuário</p>
                 </div>
-            </head>
+            </header>
 
-            <select className={estilos.containerBotao}>
+            <section className={estilos.conteinerBotoes}>
+
+                <Link className={estilos.botao} >
+                    <PiStudentBold className={estilos.icone}/>
+                    Professor
+                </Link>
+
+                <Link className={estilos.botao}>
+                    <FaPencilAlt className={estilos.icone} />
+                    Disciplina
+                </Link>
+
+                <Link className={estilos.botao}>
+                    <SiGoogleclassroom className={estilos.icone} />
+                    Ambiente
+                </Link>
                 
-                <div 
-                    className={estilos.botao}>
-                    <PiStudentLight className={estilos.icone}/> Professor</div>
-                
-                <div className={estilos.botao}>Disciplina</div>
+                <Link className={estilos.botao}>
+                    <FaCalendarAlt className={estilos.icone} />
+                    Agendamento
+                </Link>
+            </section>
 
-                <div className={estilos.botao}>Ambiente</div>
-
-                <div className={estilos.botao}>Agendamento</div>
-
-            </select>
         </aside>
     )
-};
+}

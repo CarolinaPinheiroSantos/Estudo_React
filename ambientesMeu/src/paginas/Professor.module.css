@@ -39,7 +39,7 @@
 }
 
 .formulario{
-    height: 25rem;
+    height: 30rem;
     width: 35rem;
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@
     border-radius: 2rem;
 }
 
-input::placeholder{
+input::placeholder, .campo[type="date"] {
     padding-left: 2rem;
     color: #757575;
 }

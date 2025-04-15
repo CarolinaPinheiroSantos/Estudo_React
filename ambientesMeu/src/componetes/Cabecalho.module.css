@@ -1,0 +1,12 @@
+.conteiner {
+    background-color: #9EB9D4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    color: black;
+    
+}

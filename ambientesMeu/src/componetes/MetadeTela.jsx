@@ -13,7 +13,7 @@ export function MetadeTela(){
             <div className={sytles.containerBotoes}>
                 <button 
                     className={sytles.botao}
-                    onClick={() => navigate('/')}
+                    onClick={() => navigate('/professor')}
                 >Professor</button>
 
                 <button 
