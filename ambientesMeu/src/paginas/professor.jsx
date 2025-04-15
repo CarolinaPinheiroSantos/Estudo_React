@@ -4,8 +4,6 @@ import {useForm} from 'react-hook-form'
 import {z} from 'zod'
 import {zodResolver} from '@hookform/resolvers/zod'
 
-
-
 const loginSchema = z.object({
     ni : z.string() .max(9, { message: 'No máximo 9 números' }) .regex(/^\d+$/, { message: 'Somente números são permitidos' }),
     nome: z.string({message: 'Somente letras'}),
@@ -74,7 +72,9 @@ export function Professor(){
                         />
                         {errors.dataNascimento && (<p className={styles.mensagem}>{errors.dataNascimento.message}</p>)}
                         
-                        <button className={styles.botao} >Entrar</button>
+                        <button 
+                            className={styles.botao} 
+                        >Entrar</button>
                     </form>
                 </div>
             </div>

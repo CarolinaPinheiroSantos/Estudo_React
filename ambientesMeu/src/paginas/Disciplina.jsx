@@ -10,7 +10,7 @@ const loginSchema = z.object({
                     .max(80, {message: 'O nome deve conter no máximo 80 caracteres.'}),
     curso: z.string().min(2, {message: 'O nome deve conter no mínimo 2 caracteres.'})
                      .max(100, {message: 'O nome deve conter no máximo 100 caracteres.'}),
-    cargaHoraria: z.number().min(1, {message: 'Carga horária mínima de 1h.'}),
+    cargaHoraria: z.string().min(1, {message: 'A carga deve ter no minimo um numero'}),
     descricao: z.string().min(1, {message: 'O campo não deve ficar vazio.'}),                
     responsavel: z.string().min(1, {message: 'O campo não deve ficar vazio.'})
 })
@@ -42,60 +42,59 @@ export function Disciplina() {
                         placeholder='Nome'
                         className={styles.campo}
                         />
-                    { errors.nome && (
-                        <p className={styles.mensagem}>
-                            {errors.nome.message}
-                        </p>
-                    )}
+                        { errors.nome && (
+                            <p className={styles.mensagem}>
+                                {errors.nome.message}
+                            </p>
+                        )}
 
-                    <input 
-                        {...register('curso')}
-                        placeholder='Curso'
-                        className={styles.campo}
-                    />
-                    { errors.curso && (
-                        <p className={styles.mensagem}>
-                            {errors.curso.message}
-                        </p>
-                    )}
-
-
-                    <input 
-                        {...register('cargaHoraria')}
-                        placeholder='Carga horária'
-                        className={styles.campo}
-                        type='number'
-                        
-                    />
-                    { errors.cargaHoraria && (
-                        <p className={styles.mensagem}>
-                            {errors.cargaHoraria.message}
-                        </p>
-                    )}
+                        <input 
+                            {...register('curso')}
+                            placeholder='Curso'
+                            className={styles.campo}
+                        />
+                        { errors.curso && (
+                            <p className={styles.mensagem}>
+                                {errors.curso.message}
+                            </p>
+                        )}
 
 
-                    <input 
-                        {...register('descricao')}
-                        className={styles.campo}
-                        placeholder='Descrição'
-                    />
-                    { errors.descricao && (
-                        <p className={styles.mensagem}>
-                            {errors.descricao.message}
-                        </p>
-                    )}
+                        <input 
+                            {...register('cargaHoraria')}
+                            placeholder='Carga horária'
+                            className={styles.campo}
+                            
+                        />
+                        { errors.cargaHoraria && (
+                            <p className={styles.mensagem}>
+                                {errors.cargaHoraria.message}
+                            </p>
+                        )}
 
 
-                    <input 
-                        {...register('responsavel')}
-                        className={styles.campo}
-                        placeholder='Responsável'
-                    />
-                    { errors.responsavel && (
-                        <p className={styles.mensagem}>
-                            {errors.responsavel.message}
-                        </p>
-                    )}
+                        <input 
+                            {...register('descricao')}
+                            className={styles.campo}
+                            placeholder='Descrição'
+                        />
+                        { errors.descricao && (
+                            <p className={styles.mensagem}>
+                                {errors.descricao.message}
+                            </p>
+                        )}
+
+
+                        <input 
+                            {...register('responsavel')}
+                            className={styles.campo}
+                            placeholder='Responsável'
+                        />
+                        { errors.responsavel && (
+                            <p className={styles.mensagem}>
+                                {errors.responsavel.message}
+                            </p>
+                        )}
 
                         <button className={styles.botao}>Confirmar</button>
                     </form>

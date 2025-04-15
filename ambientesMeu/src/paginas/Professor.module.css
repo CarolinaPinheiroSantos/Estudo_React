@@ -75,4 +75,5 @@ input::placeholder{
     transition: 0.5s;
     opacity: 1;
     color: #9EB9D4;
+    outline: none;
 }
